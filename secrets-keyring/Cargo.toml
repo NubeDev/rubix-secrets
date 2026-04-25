@@ -1,0 +1,33 @@
+[package]
+name = "block-os-secrets-keyring"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[lib]
+name = "secrets_keyring"
+
+[lints]
+workspace = true
+
+[features]
+# Default: per-platform native backend.
+# - Windows  → Credential Manager (DPAPI, per-user)
+# - macOS    → Keychain (login keychain)
+# - Linux    → Secret Service / libsecret (gnome-keyring, kwallet)
+default = ["native"]
+native = [
+    "keyring/apple-native",
+    "keyring/windows-native",
+    "keyring/sync-secret-service",
+    "keyring/crypto-rust",
+]
+
+[dependencies]
+block-os-secrets = { workspace = true }
+async-trait = { workspace = true }
+anyhow = { workspace = true }
+tokio = { workspace = true, features = ["macros", "rt", "sync"] }
+keyring = { version = "3", default-features = false }
