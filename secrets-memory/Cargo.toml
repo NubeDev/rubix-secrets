@@ -1,5 +1,5 @@
 [package]
-name = "block-os-secrets-memory"
+name = "rubix-secrets-memory"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
@@ -13,7 +13,7 @@ name = "secrets_memory"
 workspace = true
 
 [dependencies]
-block-os-secrets = { workspace = true }
+rubix-secrets = { workspace = true }
 async-trait = { workspace = true }
 tokio = { workspace = true }
 

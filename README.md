@@ -1,17 +1,17 @@
-# block-os-secrets
+# rubix-secrets
 
-Reusable secret-storage seam for Block OS.
+Reusable secret-storage seam for Rubix.
 
 The trait and types defined here are consumed by:
 
-- `block-agent` — picks a backend at startup based on role (memory for tests
+- `rubix-agent` — picks a backend at startup based on role (memory for tests
   and `--role cloud`, file for headless Linux opt-in, none on the agent in the
   desktop profile because Studio owns the user's keystore).
-- `block-os-desktop` — the Tauri shell's Rust side reads/writes the user's OS
+- `rubix-desktop` — the Tauri shell's Rust side reads/writes the user's OS
   keystore (`secrets-keyring`) on behalf of the signed-in user, then hands the
   agent only the bearers it needs in memory.
 
-See `block-agent/docs/design/desktop/SECRETS.md` for the full design.
+See `rubix-agent/docs/design/desktop/SECRETS.md` for the full design.
 
 ## Crates
 

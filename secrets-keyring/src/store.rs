@@ -13,7 +13,7 @@ const INDEX_ACCOUNT: &str = "__index__";
 ///
 /// `service` is the keystore "service" / "target" / "application" name,
 /// shared across every secret this process owns. The recommended value is
-/// `"block-os"`; tests and dev installs may use `"block-os-dev"` to avoid
+/// `"rubix"`; tests and dev installs may use `"rubix-dev"` to avoid
 /// stomping a real install's entries.
 #[derive(Clone)]
 pub struct KeyringSecretStore {

@@ -18,7 +18,7 @@ unsafe_code = "forbid"
 unused_must_use = "deny"
 
 [workspace.dependencies]
-block-os-secrets = { path = "secrets", version = "0.1.0" }
+rubix-secrets = { path = "secrets", version = "0.1.0" }
 
 async-trait = "0.1"
 thiserror = "1"

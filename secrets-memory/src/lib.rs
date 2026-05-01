@@ -100,7 +100,7 @@ mod tests {
     #[tokio::test]
     async fn delete_removes_value_and_is_idempotent() {
         let store = MemorySecretStore::new();
-        let k = key("blockd.owner", "m1");
+        let k = key("rubixd.owner", "m1");
         store
             .put(&k, Secret::from_string("token".into()))
             .await

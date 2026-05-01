@@ -1,7 +1,7 @@
 /// Stable identity of a secret in the store.
 ///
 /// Backends map this to whatever native identifier they support. The keyring
-/// backend uses service `block-os` and account `<kind>:<scope>`.
+/// backend uses service `rubix` and account `<kind>:<scope>`.
 ///
 /// `kind` strings are a contract surface — additions are part of a versioned
 /// release. Reserved kinds today:
@@ -9,7 +9,7 @@
 /// - `oidc.refresh`     — OIDC refresh token (scope: profile id)
 /// - `fleet.bootstrap`  — one-shot fleet enrollment secret (scope: fleet id)
 /// - `fleet.session`    — long-lived fleet session token (scope: fleet id)
-/// - `blockd.owner`     — bearer for the local blockd loopback API (scope: machine id)
+/// - `rubixd.owner`     — bearer for the local rubixd loopback API (scope: machine id)
 /// - `cloud.cert_pin`   — SHA-256 pin of the cloud API TLS cert (scope: host)
 /// - `studio.handshake` — Tauri-shell ↔ agent loopback bearer (scope: install id)
 /// - `provision.token` — Zitadel post-login Action bearer (scope: `default`)

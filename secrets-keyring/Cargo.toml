@@ -1,5 +1,5 @@
 [package]
-name = "block-os-secrets-keyring"
+name = "rubix-secrets-keyring"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
@@ -26,7 +26,7 @@ native = [
 ]
 
 [dependencies]
-block-os-secrets = { workspace = true }
+rubix-secrets = { workspace = true }
 async-trait = { workspace = true }
 anyhow = { workspace = true }
 tokio = { workspace = true, features = ["macros", "rt", "sync"] }

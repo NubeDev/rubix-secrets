@@ -12,7 +12,7 @@
 //! in how they treat enumeration. We:
 //!
 //! - run every `Entry` call inside [`tokio::task::spawn_blocking`] so the
-//!   async runtime stays responsive when a Linux unlock dialog blocks;
+//!   async runtime stays responsive when a Linux unlock dialog extensions;
 //! - persist a small index entry under the reserved account `__index__` so
 //!   [`SecretStore::list`] is portable. Without this, Windows Credential
 //!   Manager and macOS Keychain enumeration require platform-specific code
